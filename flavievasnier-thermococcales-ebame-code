@@ -1,0 +1,25 @@
+# Recovering genome IDs to download
+gimme_taxa.py 2258 \
+              -o TAX-IDs-RICH.txt
+
+gimme_taxa.py 2258 \
+              -o TAX-IDs-SIMPLE.txt \
+              --just-taxids
+
+# NCBI data download from terminal
+ncbi-genome-download -t TAX-IDs-SIMPLE.txt \ 
+                     archaea \
+                     -o 2258 \
+                     --metadata NCBI-METADATA.txt \
+                     -s genbank \
+                     --assembly-levels complete
+
+# Processing NCBI genomes
+anvi-script-process-genbank-metadata -m NCBI-METADATA.txt \
+                                     -o NCBI-GENOMES \
+                                     --output-fasta-txt fasta.txt \
+                                     --exclude-gene-calls-from-fasta-txt
+
+
+# Creation of the “config-pangenomics.json” document
+
