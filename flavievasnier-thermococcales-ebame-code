@@ -7,8 +7,7 @@ gimme_taxa.py 2258 \
               --just-taxids
 
 #NCBI data download from terminal
-ncbi-genome-download -t TAX-IDs-SIMPLE.txt \ 
-                     archaea \
+ncbi-genome-download -t TAX-IDs-SIMPLE.txt archaea \
                      -o 2258 \
                      --metadata NCBI-METADATA.txt \
                      -s genbank \
