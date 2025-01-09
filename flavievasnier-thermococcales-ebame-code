@@ -44,7 +44,11 @@ anvi-run-workflow -w pangenomics \
 
 #Run the workflow
 anvi-run-workflow -w pangenomics \
-                  -c config-pangenomics.json
+  -c config-pangenomics.json \
+  --additional-params \
+  --jobs 6 \
+  --resources nodes=6
+
 
 #Cleaning up badly reformatted fasta files
 anvi-script-reformat-fasta /Users/flavievasnier/Documents/thermo_ebame/NCBI-GENOMES/Pyrococcus_furiosus_COM1_GCA_000275605_1-contigs.fa -o temp.fasta --seq-type NT --simplify-names
