@@ -53,6 +53,9 @@ anvi-run-workflow -w pangenomics \
 #Cleaning up badly reformatted fasta files
 anvi-script-reformat-fasta /Users/flavievasnier/Documents/thermo_ebame/NCBI-GENOMES/Pyrococcus_furiosus_COM1_GCA_000275605_1-contigs.fa -o temp.fasta --seq-type NT --simplify-names
 
+anvi-script-reformat-fasta /Users/flavievasnier/Documents/codeanna-ebame/NCBI-GENOMES/Pyrococcus_furiosus_COM1_GCA_000275605_1-contigs.fa -o temp.fasta --seq-type NT --simplify-names       
+
+
 #See the pangenome
 anvi-display-pan -g 03_PAN/MYPAN-GENOMES.db \
                  -p 03_PAN/MYPAN-PAN.db
